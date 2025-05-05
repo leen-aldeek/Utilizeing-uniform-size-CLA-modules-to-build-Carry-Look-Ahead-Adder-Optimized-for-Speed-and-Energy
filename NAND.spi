@@ -1,0 +1,30 @@
+*** SPICE deck for cell NAND{sch} from library Leen-fulladder
+*** Created on Sun Nov 17, 2024 18:45:29
+*** Last revised on Mon Jan 13, 2025 20:06:48
+*** Written on Mon Jan 13, 2025 20:06:53 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Leen-fulladder:NAND{sch}
+Mnmos@0 net@7 B_1 gnd gnd myNMOS L=0.6U W=6U
+Mnmos@1 AnandB A_1 net@7 gnd myNMOS L=0.6U W=6U
+Mpmos@0 AnandB A_1 vdd vdd myPMOS L=0.6U W=6U
+Mpmos@1 AnandB B_1 vdd vdd myPMOS L=0.6U W=6U
+
+* Spice Code nodes in cell cell 'Leen-fulladder:NAND{sch}'
+* Circuit Simulation
+vdd vdd 0 DC 5
+va A_1 0 pwl (10n 0) (20n 5) (50n 5) (60n 0) (70n 0) (80n 5) (100n 5) (110n 0) (130n 0) (140n 5) (170n 5) (180n 0) (190n 0) (200n 5) (240n 5) (250n 0)
+vb B_1 0 pwl (10n 0) (20n 5) (30n 5) (40n 0) (50n 0) (60n 5) (70n 5) (80n 0) (90n 0) (100n 5) (110n 5) (120n 0) (130n 0) (140n 5) (170n 5) (180n 0)
+cload AnandB 0 250pF
+* Measurements
+.measure tran tf trig v(AnandB) val=4.5 fall=1 td=4ns trag v(AnandB) val=0.5 fall=1
+.measure tran tr trig v(AnandB) val=0.5 rais=1 td=4ns trag v(AnandB) val=4.5 rais=1
+* Transient Analysis
+.tran 0 0.5us 0 1ns
+* Model File Inclusion
+.include "C:\\Users\\HP\\Desktop\\electric vlsi\\C5_models.txt"
+.END
+.END

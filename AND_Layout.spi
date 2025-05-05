@@ -1,0 +1,38 @@
+*** SPICE deck for cell AND_Layout{lay} from library IC_Project
+*** Created on Fri Jan 10, 2025 11:54:36
+*** Last revised on Sat Jan 11, 2025 17:27:44
+*** Written on Sat Jan 11, 2025 17:27:50 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*** WARNING: no power connection for P-transistor wells in cell 'AND_Layout{lay}'
+*** WARNING: no ground connection for N-transistor wells in cell 'AND_Layout{lay}'
+
+*** TOP LEVEL CELL: AND_Layout{lay}
+Mnmos@0 net@17 net@3 net@0 gnd myNMOS L=0.6U W=3U AS=33.075P AD=4.95P PS=34.05U PD=6.3U
+Mnmos@1 net@1 net@6 net@17 gnd myNMOS L=0.6U W=3U AS=4.95P AD=4.5P PS=6.3U PD=7U
+Mnmos@3 net@0 net@1 net@44 gnd myNMOS L=0.6U W=3U AS=6.75P AD=33.075P PS=10.5U PD=34.05U
+Mpmos@0 net@1 net@3 net@12 vdd myPMOS L=0.6U W=3U AS=23.85P AD=4.5P PS=25.9U PD=7U
+Mpmos@1 net@12 net@6 net@1 vdd myPMOS L=0.6U W=3U AS=4.5P AD=23.85P PS=7U PD=25.9U
+Mpmos@3 net@12 net@1 net@44 vdd myPMOS L=0.6U W=3U AS=6.75P AD=23.85P PS=10.5U PD=25.9U
+
+* Spice Code nodes in cell cell 'AND_Layout{lay}'
+* AND Gate Implementation
+VDD VDD 0 DC 5
+VA A 0 PWL 10n 0 20n 5 50n 5 60n 0 70n 0 80n 5 100n 5 110n 0 130n 0 140n 5 170n 5 180n 0 190n 0 200n 5 240n 5 250n 0
+VB B 0 PWL 10n 0 20n 5 30n 5 40n 0 50n 0 60n 5 70n 5 80n 0 90n 0 100n 5 110n 5 120n 0 130n 0 140n 5 170n 5 180n 0
+* CMOS AND Gate
+M1 OUT B N1 0 myNMOS L=0.18u W=1u
+M2 N1 A 0 0 myNMOS L=0.18u W=1u
+M3 OUT A VDD VDD myPMOS L=0.18u W=1u
+M4 OUT B VDD VDD myPMOS L=0.18u W=1u
+* Load Capacitance
+CLOAD OUT 0 250fF
+* Measurement Statements
+.measure tran tf TRIG V(OUT) VAL=4.5 FALL=1 TD=4ns TARG V(OUT) VAL=0.5 FALL=1
+.measure tran tr TRIG V(OUT) VAL=0.5 RISE=1 TD=4ns TARG V(OUT) VAL=4.5 RISE=1
+* Transient Analysis
+.tran 0 0.5us
+* Include Model File
+.include "C:\Users\HP\Desktop\electric vlsi\C5_models.txt"
+.END
+.END

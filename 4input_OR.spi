@@ -1,0 +1,48 @@
+*** SPICE deck for cell 4input_OR{sch} from library IC_Project
+*** Created on Sat Jan 11, 2025 09:52:45
+*** Last revised on Sat Jan 11, 2025 10:19:33
+*** Written on Sat Jan 11, 2025 10:19:39 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 4input_OR{sch}
+Mnmos@0 net@0 B gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@0 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@0 D gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 net@26 net@0 gnd gnd myNMOS L=0.6U W=3U
+Mnmos@4 net@0 A gnd gnd myNMOS L=0.6U W=0.6U
+Mpmos@0 net@47 B net@15 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 net@15 C net@8 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 net@8 D net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd net@0 net@26 vdd myPMOS L=0.6U W=3U
+Mpmos@4 vdd A net@47 vdd myPMOS L=0.6U W=0.6U
+
+* Spice Code nodes in cell cell '4input_OR{sch}'
+* 4-Input OR Gate Implementation
+VDD VDD 0 DC 5
+VA A 0 PWL 10n 0 20n 5 50n 5 60n 0 70n 0 80n 5 100n 5 110n 0 130n 0 140n 5 170n 5 180n 0 190n 0 200n 5 240n 5 250n 0
+VB B 0 PWL 10n 0 20n 5 30n 5 40n 0 50n 0 60n 5 70n 5 80n 0 90n 0 100n 5 110n 5 120n 0 130n 0 140n 5 170n 5 180n 0
+VC C 0 PWL 10n 0 30n 5 60n 5 90n 0 120n 0 140n 5 170n 5 200n 0 240n 5 250n 0
+VD D 0 PWL 10n 0 40n 5 70n 5 100n 0 130n 0 160n 5 190n 5 220n 0 250n 5
+* CMOS 4-Input OR Gate
+M1 OUT A 0 0 myNMOS L=0.18u W=1u
+M2 OUT B 0 0 myNMOS L=0.18u W=1u
+M3 OUT C 0 0 myNMOS L=0.18u W=1u
+M4 OUT D 0 0 myNMOS L=0.18u W=1u
+M5 OUT A VDD VDD myPMOS L=0.18u W=1u
+M6 OUT B VDD VDD myPMOS L=0.18u W=1u
+M7 OUT C VDD VDD myPMOS L=0.18u W=1u
+M8 OUT D VDD VDD myPMOS L=0.18u W=1u
+* Load Capacitance
+CLOAD OUT 0 250fF
+* Measurement Statements
+.measure tran tf TRIG V(OUT) VAL=4.5 FALL=1 TD=4ns TARG V(OUT) VAL=0.5 FALL=1
+.measure tran tr TRIG V(OUT) VAL=0.5 RISE=1 TD=4ns TARG V(OUT) VAL=4.5 RISE=1
+* Transient Analysis
+.tran 0 0.5us
+* Include Model File
+.include "C:\Users\HP\Desktop\electric vlsi\C5_models.txt"
+.END
+.END

@@ -1,0 +1,23 @@
+*** SPICE deck for cell inverter{sch} from library Leen-fulladder
+*** Created on Fri Nov 15, 2024 13:52:54
+*** Last revised on Mon Jan 13, 2025 18:28:44
+*** Written on Mon Jan 13, 2025 18:28:59 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Leen-fulladder:inverter{sch}
+Mnmos@0 B A gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A B vdd myPMOS L=0.6U W=6U
+
+* Spice Code nodes in cell cell 'Leen-fulladder:inverter{sch}'
+vdd vdd 0 DC 5
+vin A 0 pwl 10n 0 20n 5 50n 5 60n 0
+cload out 0 250fF
+.measure tran tf trig v(B) val=4.5 fall=1 td=8ns trag v(Y) val=0.5 fall=1
+.measure tran tr trig v(B) val=0.5 rais=1 td=50ns trag v(Y) val=4.5 rais=1
+.tran 0 0.1us
+.include "C:\Users\HP\Desktop\electric vlsi\C5_models.txt"
+.END
+.END

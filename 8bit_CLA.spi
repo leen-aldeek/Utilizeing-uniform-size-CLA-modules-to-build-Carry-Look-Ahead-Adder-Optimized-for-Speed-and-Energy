@@ -1,0 +1,211 @@
+*** SPICE deck for cell 8bit_CLA{sch} from library IC_Project
+*** Created on Sat Jan 11, 2025 19:32:47
+*** Last revised on Tue Jan 14, 2025 07:37:20
+*** Written on Tue Jan 14, 2025 07:38:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT IC_Project__2_Input_And_Gate FROM CELL 2_Input_And_Gate{sch}
+.SUBCKT IC_Project__2_Input_And_Gate A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@6 out net@95 gnd gnd myNMOS L=0.6U W=3U
+Mnmos@7 net@95 A net@113 gnd myNMOS L=0.6U W=1.5U
+Mnmos@8 net@113 B gnd gnd myNMOS L=0.6U W=1.5U
+Mpmos@5 vdd net@95 out vdd myPMOS L=0.6U W=6U
+Mpmos@6 net@95 A vdd vdd myPMOS L=0.6U W=3U
+Mpmos@7 net@95 B vdd vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__2_Input_And_Gate
+
+*** SUBCIRCUIT IC_Project__2input_OR FROM CELL 2input_OR{sch}
+.SUBCKT IC_Project__2input_OR A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@4 A gnd gnd myNMOS L=0.6U W=1.5U
+Mnmos@1 net@4 B gnd gnd myNMOS L=0.6U W=1.5U
+Mnmos@2 out net@4 gnd gnd myNMOS L=0.6U W=1.5U
+Mpmos@0 vdd A net@2 vdd myPMOS L=0.6U W=3U
+Mpmos@1 net@2 B net@4 vdd myPMOS L=0.6U W=3U
+Mpmos@2 vdd net@4 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__2input_OR
+
+*** SUBCIRCUIT IC_Project__3input_And FROM CELL 3input_And{sch}
+.SUBCKT IC_Project__3input_And A B C out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@0 A net@69 gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@69 B net@70 gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@70 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 out net@0 gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 vdd B net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 vdd C net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd net@0 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__3input_And
+
+*** SUBCIRCUIT IC_Project__3input_OR FROM CELL 3input_OR{sch}
+.SUBCKT IC_Project__3input_OR A B C out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@7 A gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@7 B gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@7 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@4 out net@7 gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A net@3 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 net@3 B net@2 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 net@2 C net@7 vdd myPMOS L=0.6U W=0.6U
+Mpmos@4 vdd net@7 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__3input_OR
+
+*** SUBCIRCUIT IC_Project__4input_AND FROM CELL 4input_AND{sch}
+.SUBCKT IC_Project__4input_AND A B C D out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@18 A net@34 gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@34 B net@35 gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@35 C net@37 gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 net@37 D gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@4 out net@18 gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 vdd B net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 vdd C net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd D net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@4 vdd net@18 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__4input_AND
+
+*** SUBCIRCUIT IC_Project__4input_OR FROM CELL 4input_OR{sch}
+.SUBCKT IC_Project__4input_OR A B C D OUT
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@0 B gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@0 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@0 D gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 OUT net@0 gnd gnd myNMOS L=0.6U W=3U
+Mnmos@4 net@0 A gnd gnd myNMOS L=0.6U W=0.6U
+Mpmos@0 net@47 B net@15 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 net@15 C net@8 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 net@8 D net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd net@0 OUT vdd myPMOS L=0.6U W=3U
+Mpmos@4 vdd A net@47 vdd myPMOS L=0.6U W=0.6U
+.ENDS IC_Project__4input_OR
+
+*** SUBCIRCUIT IC_Project__xorgate FROM CELL xorgate{sch}
+.SUBCKT IC_Project__xorgate A AxorB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 AxorB A net@12 gnd myNMOS L=0.6U W=6U
+Mnmos@1 net@0 B gnd gnd myNMOS L=0.6U W=3U
+Mnmos@2 net@5 A gnd gnd myNMOS L=0.6U W=3U
+Mnmos@3 net@12 B gnd gnd myNMOS L=0.6U W=6U
+Mnmos@4 AxorB net@5 net@14 gnd myNMOS L=0.6U W=6U
+Mnmos@5 net@14 net@0 gnd gnd myNMOS L=0.6U W=6U
+Mpmos@0 net@57 net@5 vdd vdd myPMOS L=0.6U W=12U
+Mpmos@1 AxorB B net@57 vdd myPMOS L=0.6U W=12U
+Mpmos@2 net@0 B vdd vdd myPMOS L=0.6U W=6U
+Mpmos@3 net@5 A vdd vdd myPMOS L=0.6U W=6U
+Mpmos@4 net@13 net@0 vdd vdd myPMOS L=0.6U W=12U
+Mpmos@5 AxorB A net@13 vdd myPMOS L=0.6U W=12U
+.ENDS IC_Project__xorgate
+
+*** SUBCIRCUIT IC_Project__CLA_withCarry FROM CELL CLA_withCarry{sch}
+.SUBCKT IC_Project__CLA_withCarry A0 A1 A2 A3 B0 B1 B2 B3 C0 C4 S0 S1 S2 S3
+** GLOBAL gnd
+** GLOBAL vdd
+X_2_Input_@0 A3 B3 net@27 IC_Project__2_Input_And_Gate
+X_2_Input_@1 net@162 net@27 net@23 IC_Project__2_Input_And_Gate
+X_2_Input_@2 A2 B2 net@63 IC_Project__2_Input_And_Gate
+X_2_Input_@4 net@63 net@108 net@82 IC_Project__2_Input_And_Gate
+X_2_Input_@5 A1 B1 net@55 IC_Project__2_Input_And_Gate
+X_2_Input_@6 A0 B0 net@71 IC_Project__2_Input_And_Gate
+X_2_Input_@7 net@55 net@50 net@33 IC_Project__2_Input_And_Gate
+X_2_Input_@8 net@27 net@207 net@257 IC_Project__2_Input_And_Gate
+X_2_Input_@9 net@27 net@138 net@121 IC_Project__2_Input_And_Gate
+X_2_Input_@10 C0 net@121 net@117 IC_Project__2_Input_And_Gate
+X_2_Input_@11 C0 net@184 net@234 IC_Project__2_Input_And_Gate
+X_2_Input_@12 C0 net@88 net@100 IC_Project__2_Input_And_Gate
+X_2input_O@0 net@27 net@23 net@30 IC_Project__2input_OR
+X_3input_A@0 net@63 net@108 net@50 net@42 IC_Project__3input_And
+X_3input_A@1 net@27 net@138 net@108 net@85 IC_Project__3input_And
+X_3input_A@2 net@162 net@138 net@108 net@184 IC_Project__3input_And
+X_3input_O@0 net@85 net@82 net@63 net@178 IC_Project__3input_OR
+X_4input_A@0 net@27 net@138 net@108 net@50 net@47 IC_Project__4input_AND
+X_4input_A@1 net@162 net@138 net@108 net@50 net@88 IC_Project__4input_AND
+X_4input_O@0 net@47 net@42 net@33 net@71 net@245 IC_Project__4input_OR
+Xxorgate@0 A3 net@162 B3 IC_Project__xorgate
+Xxorgate@1 net@162 S0 C0 IC_Project__xorgate
+Xxorgate@2 net@207 S1 net@30 IC_Project__xorgate
+Xxorgate@3 A2 net@207 B2 IC_Project__xorgate
+Xxorgate@4 A1 net@108 B1 IC_Project__xorgate
+Xxorgate@5 A0 net@50 B0 IC_Project__xorgate
+Xxorgate@6 net@257 net@262 net@63 IC_Project__xorgate
+Xxorgate@7 net@262 net@115 net@117 IC_Project__xorgate
+Xxorgate@8 net@108 S2 net@115 IC_Project__xorgate
+Xxorgate@9 net@178 net@250 net@234 IC_Project__xorgate
+Xxorgate@10 net@50 S3 net@250 IC_Project__xorgate
+Xxorgate@11 net@245 C4 net@100 IC_Project__xorgate
+.ENDS IC_Project__CLA_withCarry
+
+*** SUBCIRCUIT IC_Project__carryLA FROM CELL carryLA{sch}
+.SUBCKT IC_Project__carryLA A0 A1 A2 A3 B0 B1 B2 B3 C4 S0 S1 S2 S3
+** GLOBAL gnd
+** GLOBAL vdd
+X_2_Input_@0 A3 B3 net@31 IC_Project__2_Input_And_Gate
+X_2_Input_@1 A2 B2 net@35 IC_Project__2_Input_And_Gate
+X_2_Input_@2 net@31 net@25 net@44 IC_Project__2_Input_And_Gate
+X_2_Input_@3 A1 B1 net@115 IC_Project__2_Input_And_Gate
+X_2_Input_@4 net@35 net@94 net@117 IC_Project__2_Input_And_Gate
+X_2_Input_@5 A0 B0 net@79 IC_Project__2_Input_And_Gate
+X_2_Input_@7 net@115 net@83 net@73 IC_Project__2_Input_And_Gate
+X_2input_O@0 net@44 net@35 net@46 IC_Project__2input_OR
+X_3input_A@0 net@31 net@25 net@94 net@57 IC_Project__3input_And
+X_3input_A@2 net@35 net@94 net@83 net@75 IC_Project__3input_And
+X_3input_O@0 net@57 net@117 net@115 net@69 IC_Project__3input_OR
+X_4input_A@0 net@31 net@25 net@94 net@83 net@77 IC_Project__4input_AND
+X_4input_O@1 net@77 net@75 net@73 net@79 C4 IC_Project__4input_OR
+Xxorgate@0 A3 S0 B3 IC_Project__xorgate
+Xxorgate@1 net@31 S1 net@25 IC_Project__xorgate
+Xxorgate@2 A2 net@25 B2 IC_Project__xorgate
+Xxorgate@4 net@46 S2 net@94 IC_Project__xorgate
+Xxorgate@5 A1 net@94 B1 IC_Project__xorgate
+Xxorgate@6 net@83 S3 net@69 IC_Project__xorgate
+Xxorgate@7 A0 net@83 B0 IC_Project__xorgate
+.ENDS IC_Project__carryLA
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 8bit_CLA{sch}
+XCLA_with@0 CLA_with@0_A0 CLA_with@0_A1 CLA_with@0_A2 CLA_with@0_A3 CLA_with@0_B0 CLA_with@0_B1 CLA_with@0_B2 CLA_with@0_B3 net@14 CLA_with@0_C4 CLA_with@0_S0 CLA_with@0_S1 CLA_with@0_S2 CLA_with@0_S3 IC_Project__CLA_withCarry
+XcarryLA@0 carryLA@0_A0 carryLA@0_A1 carryLA@0_A2 carryLA@0_A3 carryLA@0_B0 carryLA@0_B1 carryLA@0_B2 carryLA@0_B3 net@14 carryLA@0_S0 carryLA@0_S1 carryLA@0_S2 carryLA@0_S3 IC_Project__carryLA
+
+* Spice Code nodes in cell cell '8bit_CLA{sch}'
+* 8-Bit Carry Lookahead Adder
+* Voltage Supplies
+VDD VDD 0 DC 5
+* Input Voltage Sources for A and B (8 Bits)
+* First 4 bits of A
+VA0 A0 0 PWL(0 0 10n 5 20n 5 30n 0 40n 0)
+VA1 A1 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+VA2 A2 0 PWL(0 0 10n 5 20n 5 30n 0 40n 0)
+VA3 A3 0 PWL(0 0 10n 0 20n 0 30n 5 40n 5)
+* Last 4 bits of A
+VA4 A4 0 PWL(0 0 10n 5 20n 5 30n 0 40n 0)
+VA5 A5 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+VA6 A6 0 PWL(0 0 10n 5 20n 5 30n 0 40n 0)
+VA7 A7 0 PWL(0 0 10n 0 20n 0 30n 5 40n 5)
+* First 4 bits of B
+VB0 B0 0 PWL(0 0 10n 5 20n 0 30n 0 40n 5)
+VB1 B1 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+VB2 B2 0 PWL(0 0 10n 5 20n 0 30n 0 40n 5)
+VB3 B3 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+* Last 4 bits of B
+VB4 B4 0 PWL(0 0 10n 5 20n 0 30n 0 40n 5)
+VB5 B5 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+VB6 B6 0 PWL(0 0 10n 5 20n 0 30n 0 40n 5)
+VB7 B7 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+* First 4-bit CLA (without carry inptu
+* Second 4-bit CLA (with carry input from the first CLA
+.tran 0 100n
+* Include Model File for 4-bit CLA modules
+.include "C:\Users\HP\Desktop\electric vlsi\C5_models.txt"
+.END
+.END

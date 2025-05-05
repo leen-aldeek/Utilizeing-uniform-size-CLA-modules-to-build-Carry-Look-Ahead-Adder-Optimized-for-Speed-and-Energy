@@ -1,0 +1,25 @@
+*** SPICE deck for cell 2_Input_And_Gate{sch} from library IC_Project
+*** Created on Thu Jan 09, 2025 12:11:05
+*** Last revised on Mon Jan 13, 2025 20:16:22
+*** Written on Mon Jan 13, 2025 20:16:43 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 2_Input_And_Gate{sch}
+Mnmos@6 out net@95 gnd gnd myNMOS L=0.6U W=3U
+Mnmos@7 net@95 A net@113 gnd myNMOS L=0.6U W=1.5U
+Mnmos@8 net@113 B gnd gnd myNMOS L=0.6U W=1.5U
+Mpmos@5 vdd net@95 out vdd myPMOS L=0.6U W=6U
+Mpmos@6 net@95 A vdd vdd myPMOS L=0.6U W=3U
+Mpmos@7 net@95 B vdd vdd myPMOS L=0.6U W=3U
+
+* Spice Code nodes in cell cell '2_Input_And_Gate{sch}'
+vdd vdd 0 DC 5 
+va A 0 pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5
+vb B 0 pwl 10n 0 20n 5 100n 5 110n 0
+.measure tran tf trig out val=4.5 fall=1 td=4ns
+.measure tran tr trig out val=0.5 rais=1 td=4ns
+  .tran 200n 
+.END

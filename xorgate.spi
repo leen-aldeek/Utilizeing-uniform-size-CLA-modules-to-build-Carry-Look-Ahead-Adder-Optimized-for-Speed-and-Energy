@@ -1,0 +1,33 @@
+*** SPICE deck for cell xorgate{sch} from library Leen-fulladder
+*** Created on Sun Nov 17, 2024 18:03:01
+*** Last revised on Mon Jan 13, 2025 20:24:13
+*** Written on Mon Jan 13, 2025 20:24:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Leen-fulladder:xorgate{sch}
+Mnmos@0 AxorB A net@12 gnd myNMOS L=0.6U W=6U
+Mnmos@1 net@0 B gnd gnd myNMOS L=0.6U W=3U
+Mnmos@2 net@5 A gnd gnd myNMOS L=0.6U W=3U
+Mnmos@3 net@12 B gnd gnd myNMOS L=0.6U W=6U
+Mnmos@4 AxorB net@5 net@14 gnd myNMOS L=0.6U W=6U
+Mnmos@5 net@14 net@0 gnd gnd myNMOS L=0.6U W=6U
+Mpmos@0 net@57 net@5 vdd vdd myPMOS L=0.6U W=12U
+Mpmos@1 AxorB B net@57 vdd myPMOS L=0.6U W=12U
+Mpmos@2 net@0 B vdd vdd myPMOS L=0.6U W=6U
+Mpmos@3 net@5 A vdd vdd myPMOS L=0.6U W=6U
+Mpmos@4 net@13 net@0 vdd vdd myPMOS L=0.6U W=12U
+Mpmos@5 AxorB A net@13 vdd myPMOS L=0.6U W=12U
+
+* Spice Code nodes in cell cell 'Leen-fulladder:xorgate{sch}'
+vdd vdd 0 DC 5
+va A 0 pwl 10n 0 20n 5 50n 5 60n 0 70n 0 80n 5 100n 5 110n 0 130n 0 140n 5 170n 5 180n 0 190n 0 200n 5 240n 5 250n 0
+vb B 0 pwl 10n 0 20n 5  30n 5 40n 0 50n 0 60n 5 70n 5 80n 0 90n 0 100n 5 110n 5 120n 0 130n 0 140n 5 170n 5 180n 0
+cload OUT 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=4ns trag v(out) val=0.5 fall=1
+.measure tran tr trig v(out) val=0.5 rais=1 td=4ns trag v(out) val=4.5 rais=1
+.tran 0 0.5us
+.include "C:\Users\HP\Desktop\electric vlsi\C5_models.txt"
+.END

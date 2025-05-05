@@ -1,0 +1,17 @@
+cdlInKeys = list(nil
+    'searchPath             "xorlay.cdl"
+    'cdlFile                "C:\Users\HP\Desktop\IC_Project\xorlay.cdl"
+    'userSkillFile          ""
+    'opusLib                ""
+    'primaryCell            "xorlay"
+    'caseSensitivity        "lower"
+    'hierarchy              "flatten"
+    'cellTable              ""
+    'viewName               "netlist"
+    'viewType               ""
+    'pr                     nil
+    'skipDevice             nil
+    'schemaLib              "sample"
+    'refLib                 ""
+    'globalNodeExpand       "full"
+)

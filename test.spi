@@ -1,0 +1,26 @@
+*** SPICE deck for cell test{lay} from library IC_Project
+*** Created on Mon Jan 13, 2025 10:58:20
+*** Last revised on Tue Jan 14, 2025 07:31:00
+*** Written on Tue Jan 14, 2025 07:31:10 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT IC_Project__xorlay FROM CELL xorlay{lay}
+.SUBCKT IC_Project__xorlay A AxorB B gnd vdd
+Mnmos@0 net@64 B gnd gnd myNMOS L=0.6U W=3U AS=28.238P AD=3.375P PS=26.325U PD=5.25U
+Mnmos@1 AxorB A net@64 gnd myNMOS L=0.6U W=3U AS=3.375P AD=8.55P PS=5.25U PD=12.788U
+Mnmos@2 net@72 net@24 AxorB gnd myNMOS L=0.6U W=3U AS=8.55P AD=3.262P PS=12.788U PD=5.175U
+Mnmos@3 gnd net@1 net@72 gnd myNMOS L=0.6U W=3U AS=3.262P AD=28.238P PS=5.175U PD=26.325U
+Mnmos@4 net@24 A gnd gnd myNMOS L=0.6U W=3U AS=28.238P AD=8.775P PS=26.325U PD=12.9U
+Mnmos@5 gnd B net@1 gnd myNMOS L=0.6U W=3U AS=8.438P AD=28.238P PS=12.75U PD=26.325U
+Mpmos@0 vdd net@24 net@22 vdd myPMOS L=0.6U W=6U AS=6.525P AD=33.975P PS=8.175U PD=32.325U
+Mpmos@1 net@22 B AxorB vdd myPMOS L=0.6U W=6U AS=8.55P AD=6.525P PS=12.788U PD=8.175U
+Mpmos@2 AxorB A net@67 vdd myPMOS L=0.6U W=6U AS=6.525P AD=8.55P PS=8.175U PD=12.788U
+Mpmos@3 net@67 net@1 vdd vdd myPMOS L=0.6U W=6U AS=33.975P AD=6.525P PS=32.325U PD=8.175U
+Mpmos@4 vdd A net@24 vdd myPMOS L=0.6U W=6U AS=8.775P AD=33.975P PS=12.9U PD=32.325U
+Mpmos@5 net@1 B vdd vdd myPMOS L=0.6U W=6U AS=33.975P AD=8.438P PS=32.325U PD=12.75U
+.ENDS IC_Project__xorlay
+
+*** TOP LEVEL CELL: test{lay}
+Xxorlay@0 xorlay@0_A xorlay@0_AxorB xorlay@0_B xorlay@0_GND xorlay@0_VDD IC_Project__xorlay
+.END

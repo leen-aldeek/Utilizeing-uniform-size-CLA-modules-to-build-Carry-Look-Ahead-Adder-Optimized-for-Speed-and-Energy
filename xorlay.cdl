@@ -1,0 +1,17 @@
+* First line is ignored
+
+*** SUBCIRCUIT xorlay FROM CELL IC_Project:xorlay{lay}
+.SUBCKT xorlay A AxorB B gnd vdd
+Mnmos@0 net@64 B gnd nmos@0_n-trans-well myNMOS L=0.6U W=3U
+Mnmos@1 AxorB A net@64 nmos@1_n-trans-well myNMOS L=0.6U W=3U
+Mnmos@2 net@72 net@24 AxorB nmos@2_n-trans-well myNMOS L=0.6U W=3U
+Mnmos@3 gnd net@1 net@72 nmos@3_n-trans-well myNMOS L=0.6U W=3U
+Mnmos@4 net@24 A gnd nmos@4_n-trans-well myNMOS L=0.6U W=3U
+Mnmos@5 gnd B net@1 nmos@5_n-trans-well myNMOS L=0.6U W=3U
+Mpmos@0 vdd net@24 net@22 pmos@0_p-trans-well myPMOS L=0.6U W=6U
+Mpmos@1 net@22 B AxorB pmos@1_p-trans-well myPMOS L=0.6U W=6U
+Mpmos@2 AxorB A net@67 pmos@2_p-trans-well myPMOS L=0.6U W=6U
+Mpmos@3 net@67 net@1 vdd pmos@3_p-trans-well myPMOS L=0.6U W=6U
+Mpmos@4 vdd A net@24 pmos@4_p-trans-well myPMOS L=0.6U W=6U
+Mpmos@5 net@1 B vdd pmos@5_p-trans-well myPMOS L=0.6U W=6U
+.ENDS xorlay

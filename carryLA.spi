@@ -1,0 +1,150 @@
+*** SPICE deck for cell carryLA{sch} from library IC_Project
+*** Created on Sat Jan 11, 2025 08:53:40
+*** Last revised on Tue Jan 14, 2025 07:41:42
+*** Written on Tue Jan 14, 2025 07:41:51 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT IC_Project__2_Input_And_Gate FROM CELL 2_Input_And_Gate{sch}
+.SUBCKT IC_Project__2_Input_And_Gate A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@6 out net@95 gnd gnd myNMOS L=0.6U W=3U
+Mnmos@7 net@95 A net@113 gnd myNMOS L=0.6U W=1.5U
+Mnmos@8 net@113 B gnd gnd myNMOS L=0.6U W=1.5U
+Mpmos@5 vdd net@95 out vdd myPMOS L=0.6U W=6U
+Mpmos@6 net@95 A vdd vdd myPMOS L=0.6U W=3U
+Mpmos@7 net@95 B vdd vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__2_Input_And_Gate
+
+*** SUBCIRCUIT IC_Project__2input_OR FROM CELL 2input_OR{sch}
+.SUBCKT IC_Project__2input_OR A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@4 A gnd gnd myNMOS L=0.6U W=1.5U
+Mnmos@1 net@4 B gnd gnd myNMOS L=0.6U W=1.5U
+Mnmos@2 out net@4 gnd gnd myNMOS L=0.6U W=1.5U
+Mpmos@0 vdd A net@2 vdd myPMOS L=0.6U W=3U
+Mpmos@1 net@2 B net@4 vdd myPMOS L=0.6U W=3U
+Mpmos@2 vdd net@4 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__2input_OR
+
+*** SUBCIRCUIT IC_Project__3input_And FROM CELL 3input_And{sch}
+.SUBCKT IC_Project__3input_And A B C out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@0 A net@69 gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@69 B net@70 gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@70 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 out net@0 gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 vdd B net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 vdd C net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd net@0 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__3input_And
+
+*** SUBCIRCUIT IC_Project__3input_OR FROM CELL 3input_OR{sch}
+.SUBCKT IC_Project__3input_OR A B C out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@7 A gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@7 B gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@7 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@4 out net@7 gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A net@3 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 net@3 B net@2 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 net@2 C net@7 vdd myPMOS L=0.6U W=0.6U
+Mpmos@4 vdd net@7 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__3input_OR
+
+*** SUBCIRCUIT IC_Project__4input_AND FROM CELL 4input_AND{sch}
+.SUBCKT IC_Project__4input_AND A B C D out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@18 A net@34 gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@34 B net@35 gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@35 C net@37 gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 net@37 D gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@4 out net@18 gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 vdd A net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 vdd B net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 vdd C net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd D net@18 vdd myPMOS L=0.6U W=0.6U
+Mpmos@4 vdd net@18 out vdd myPMOS L=0.6U W=3U
+.ENDS IC_Project__4input_AND
+
+*** SUBCIRCUIT IC_Project__4input_OR FROM CELL 4input_OR{sch}
+.SUBCKT IC_Project__4input_OR A B C D OUT
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@0 B gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@1 net@0 C gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@2 net@0 D gnd gnd myNMOS L=0.6U W=0.6U
+Mnmos@3 OUT net@0 gnd gnd myNMOS L=0.6U W=3U
+Mnmos@4 net@0 A gnd gnd myNMOS L=0.6U W=0.6U
+Mpmos@0 net@47 B net@15 vdd myPMOS L=0.6U W=0.6U
+Mpmos@1 net@15 C net@8 vdd myPMOS L=0.6U W=0.6U
+Mpmos@2 net@8 D net@0 vdd myPMOS L=0.6U W=0.6U
+Mpmos@3 vdd net@0 OUT vdd myPMOS L=0.6U W=3U
+Mpmos@4 vdd A net@47 vdd myPMOS L=0.6U W=0.6U
+.ENDS IC_Project__4input_OR
+
+*** SUBCIRCUIT IC_Project__xorgate FROM CELL xorgate{sch}
+.SUBCKT IC_Project__xorgate A AxorB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 AxorB A net@12 gnd myNMOS L=0.6U W=6U
+Mnmos@1 net@0 B gnd gnd myNMOS L=0.6U W=3U
+Mnmos@2 net@5 A gnd gnd myNMOS L=0.6U W=3U
+Mnmos@3 net@12 B gnd gnd myNMOS L=0.6U W=6U
+Mnmos@4 AxorB net@5 net@14 gnd myNMOS L=0.6U W=6U
+Mnmos@5 net@14 net@0 gnd gnd myNMOS L=0.6U W=6U
+Mpmos@0 net@57 net@5 vdd vdd myPMOS L=0.6U W=12U
+Mpmos@1 AxorB B net@57 vdd myPMOS L=0.6U W=12U
+Mpmos@2 net@0 B vdd vdd myPMOS L=0.6U W=6U
+Mpmos@3 net@5 A vdd vdd myPMOS L=0.6U W=6U
+Mpmos@4 net@13 net@0 vdd vdd myPMOS L=0.6U W=12U
+Mpmos@5 AxorB A net@13 vdd myPMOS L=0.6U W=12U
+.ENDS IC_Project__xorgate
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: carryLA{sch}
+X_2_Input_@0 A3 B3 net@31 IC_Project__2_Input_And_Gate
+X_2_Input_@1 A2 B2 net@35 IC_Project__2_Input_And_Gate
+X_2_Input_@2 net@31 net@25 net@44 IC_Project__2_Input_And_Gate
+X_2_Input_@3 A1 B1 net@115 IC_Project__2_Input_And_Gate
+X_2_Input_@4 net@35 net@94 net@117 IC_Project__2_Input_And_Gate
+X_2_Input_@5 A0 B0 net@79 IC_Project__2_Input_And_Gate
+X_2_Input_@7 net@115 net@83 net@73 IC_Project__2_Input_And_Gate
+X_2input_O@0 net@44 net@35 net@46 IC_Project__2input_OR
+X_3input_A@0 net@31 net@25 net@94 net@57 IC_Project__3input_And
+X_3input_A@2 net@35 net@94 net@83 net@75 IC_Project__3input_And
+X_3input_O@0 net@57 net@117 net@115 net@69 IC_Project__3input_OR
+X_4input_A@0 net@31 net@25 net@94 net@83 net@77 IC_Project__4input_AND
+X_4input_O@1 net@77 net@75 net@73 net@79 C4 IC_Project__4input_OR
+Xxorgate@0 A3 S0 B3 IC_Project__xorgate
+Xxorgate@1 net@31 S1 net@25 IC_Project__xorgate
+Xxorgate@2 A2 net@25 B2 IC_Project__xorgate
+Xxorgate@4 net@46 S2 net@94 IC_Project__xorgate
+Xxorgate@5 A1 net@94 B1 IC_Project__xorgate
+Xxorgate@6 net@83 S3 net@69 IC_Project__xorgate
+Xxorgate@7 A0 net@83 B0 IC_Project__xorgate
+
+* Spice Code nodes in cell cell 'carryLA{sch}'
+VDD VDD 0 DC 5
+VA0 A0 0 PWL(0 0 10n 5 20n 5 30n 0 40n 0)
+VA1 A1 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+VA2 A2 0 PWL(0 0 10n 5 20n 5 30n 0 40n 0)
+VA3 A3 0 PWL(0 0 10n 0 20n 0 30n 5 40n 5)
+VB0 B0 0 PWL(0 0 10n 5 20n 0 30n 0 40n 5)
+VB1 B1 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+VB2 B2 0 PWL(0 0 10n 5 20n 0 30n 0 40n 5)
+VB3 B3 0 PWL(0 0 10n 0 20n 5 30n 5 40n 0)
+* Measure the average power supplied by VDD
+.measure tran avg_power AVG (V(VDD) * I(VDD))
+* Transient Analysis
+.tran 0 100n
+.include "C:\Users\HP\Desktop\electric vlsi\C5_models.txt"
+.END
+.END

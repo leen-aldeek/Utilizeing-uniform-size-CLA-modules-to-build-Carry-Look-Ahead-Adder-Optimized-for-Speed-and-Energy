@@ -1,0 +1,66 @@
+Circuit: *** SPICE deck for cell carryLA{sch} from library IC_Project
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Va3: Removing PWL point (1e-008,0)
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+
+Measurement "avg_power" FAIL'ed
+
+
+Date: Tue Jan 14 07:41:52 2025
+Total elapsed time: 0.628 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4207
+traniter = 3687
+tranpoints = 1366
+accept = 1244
+rejected = 122
+matrix size = 113
+fillins = 150
+solver = Normal
+Thread vector: 115.1/69.8[8] 21.2/10.9[8] 7.6/12.2[1] 0.9/8.8[1]  2592/500
+Matrix Compiler1: 24.28 KB object code size  6.0/3.7/[2.0]
+Matrix Compiler2: 16.98 KB object code size  2.8/3.2/[1.0]
+

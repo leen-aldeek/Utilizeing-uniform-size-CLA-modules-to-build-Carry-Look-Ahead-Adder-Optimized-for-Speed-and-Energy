@@ -1,0 +1,42 @@
+*** SPICE deck for cell 3input_And{lay} from library IC_Project
+*** Created on Sat Jan 11, 2025 18:55:44
+*** Last revised on Sat Jan 11, 2025 19:30:50
+*** Written on Sat Jan 11, 2025 23:36:42 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*** WARNING: no ground connection for N-transistor wells in cell 'IC_Project:3input_And{lay}'
+
+*** TOP LEVEL CELL: IC_Project:3input_And{lay}
+Mnmos@0 net@13 A net@25 gnd myNMOS L=0.6U W=1.5U AS=1.125P AD=21.713P PS=3U PD=32.85U
+Mnmos@1 net@25 B net@39 gnd myNMOS L=0.6U W=1.5U AS=1.35P AD=1.125P PS=3.3U PD=3U
+Mnmos@2 net@39 C net@0 gnd myNMOS L=0.6U W=1.5U AS=5.063P AD=1.35P PS=7.725U PD=3.3U
+Mnmos@3 net@13 net@0 out gnd myNMOS L=0.6U W=3U AS=6.975P AD=21.713P PS=10.65U PD=32.85U
+Mpmos@0 vdd A net@0 vdd myPMOS L=0.6U W=3U AS=5.063P AD=13.838P PS=7.725U PD=20.1U
+Mpmos@1 net@0 B vdd vdd myPMOS L=0.6U W=3U AS=13.838P AD=5.063P PS=20.1U PD=7.725U
+Mpmos@2 vdd C net@0 vdd myPMOS L=0.6U W=3U AS=5.063P AD=13.838P PS=7.725U PD=20.1U
+Mpmos@3 vdd net@0 out vdd myPMOS L=0.6U W=3U AS=6.975P AD=13.838P PS=10.65U PD=20.1U
+
+* Spice Code nodes in cell cell 'IC_Project:3input_And{lay}'
+* Power Supply
+vdd vdd 0 DC 5
+* Input Signals with Clear Timing and Separation
+va A 0 PWL (0n 0 20n 5 50n 5 70n 0 100n 0 130n 5 160n 5 180n 0)
+vb B 0 PWL (10n 0 30n 5 60n 5 80n 0 110n 0 140n 5 170n 5 190n 0)
+vc C 0 PWL (20n 0 40n 5 70n 5 90n 0 120n 0 150n 5 180n 5 200n 0)
+* CMOS AND Gate Logic
+M1 out net1 vdd vdd pmos L=0.18u W=2u
+M2 net1 B vdd vdd pmos L=0.18u W=2u
+M3 net2 C 0 0 nmos L=0.18u W=1u
+M4 out net2 0 0 nmos L=0.18u W=1u
+* Load Capacitance
+cload out 0 1pF
+* Measurements
+.measure tran tf TRIG v(out) VAL=4.5 FALL=1 TD=8ns TARG v(out) VAL=0.5 FALL=1
+.measure tran tr TRIG v(out) VAL=0.5 RISE=1 TD=50ns TARG v(out) VAL=4.5 RISE=1
+Rpull out 0 10k
+* Extended Simulation Time for Better Visualization
+.tran 300n
+* Include Model Parameters
+.include C:\Users\HP\Desktop\electric vlsi\C5_models.txt
+.END
+.END

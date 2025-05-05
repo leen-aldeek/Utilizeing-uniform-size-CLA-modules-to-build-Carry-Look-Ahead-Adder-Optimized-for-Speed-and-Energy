@@ -1,0 +1,51 @@
+Circuit: *** SPICE deck for cell test{lay} from library IC_Project
+
+Error on line 9 : m:xorlay@0:nmos@0 xorlay@0:net@64 xorlay@0_b«:b» xorlay@0_gnd«:gnd» xorlay@0_gnd«:gnd» mynmos l=0.6u w=3u as=28.238p ad=3.375p ps=26.325u pd=5.25u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 10 : m:xorlay@0:nmos@1 xorlay@0_axorb«:axorb» xorlay@0_a«:a» xorlay@0:net@64 xorlay@0_gnd«:gnd» mynmos l=0.6u w=3u as=3.375p ad=8.55p ps=5.25u pd=12.788u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 11 : m:xorlay@0:nmos@2 xorlay@0:net@72 xorlay@0:net@24 xorlay@0_axorb«:axorb» xorlay@0_gnd«:gnd» mynmos l=0.6u w=3u as=8.55p ad=3.262p ps=12.788u pd=5.175u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 12 : m:xorlay@0:nmos@3 xorlay@0_gnd«:gnd» xorlay@0:net@1 xorlay@0:net@72 xorlay@0_gnd«:gnd» mynmos l=0.6u w=3u as=3.262p ad=28.238p ps=5.175u pd=26.325u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 13 : m:xorlay@0:nmos@4 xorlay@0:net@24 xorlay@0_a«:a» xorlay@0_gnd«:gnd» xorlay@0_gnd«:gnd» mynmos l=0.6u w=3u as=28.238p ad=8.775p ps=26.325u pd=12.9u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 14 : m:xorlay@0:nmos@5 xorlay@0_gnd«:gnd» xorlay@0_b«:b» xorlay@0:net@1 xorlay@0_gnd«:gnd» mynmos l=0.6u w=3u as=8.438p ad=28.238p ps=12.75u pd=26.325u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 15 : m:xorlay@0:pmos@0 xorlay@0_vdd«:vdd» xorlay@0:net@24 xorlay@0:net@22 xorlay@0_vdd«:vdd» mypmos l=0.6u w=6u as=6.525p ad=33.975p ps=8.175u pd=32.325u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 16 : m:xorlay@0:pmos@1 xorlay@0:net@22 xorlay@0_b«:b» xorlay@0_axorb«:axorb» xorlay@0_vdd«:vdd» mypmos l=0.6u w=6u as=8.55p ad=6.525p ps=12.788u pd=8.175u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 17 : m:xorlay@0:pmos@2 xorlay@0_axorb«:axorb» xorlay@0_a«:a» xorlay@0:net@67 xorlay@0_vdd«:vdd» mypmos l=0.6u w=6u as=6.525p ad=8.55p ps=8.175u pd=12.788u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 18 : m:xorlay@0:pmos@3 xorlay@0:net@67 xorlay@0:net@1 xorlay@0_vdd«:vdd» xorlay@0_vdd«:vdd» mypmos l=0.6u w=6u as=33.975p ad=6.525p ps=32.325u pd=8.175u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 19 : m:xorlay@0:pmos@4 xorlay@0_vdd«:vdd» xorlay@0_a«:a» xorlay@0:net@24 xorlay@0_vdd«:vdd» mypmos l=0.6u w=6u as=8.775p ad=33.975p ps=12.9u pd=32.325u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 20 : m:xorlay@0:pmos@5 xorlay@0:net@1 xorlay@0_b«:b» xorlay@0_vdd«:vdd» xorlay@0_vdd«:vdd» mypmos l=0.6u w=6u as=33.975p ad=8.438p ps=32.325u pd=12.75u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Fatal Error: No analysis request found.
